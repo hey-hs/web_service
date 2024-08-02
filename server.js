@@ -27,7 +27,7 @@ app.post("/api/users", async (req, res) => {
   }
 });
 
-app.get("/api/users", async (req, res) => {
+app.get("/api/users", async (_req, res) => {
   try {
     const users = await User.find();
     res.status(200).send(users);
@@ -36,7 +36,7 @@ app.get("/api/users", async (req, res) => {
   }
 });
 
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
