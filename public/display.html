@@ -27,7 +27,7 @@
       $(document).ready(function () {
         $.ajax({
           type: "GET",
-          url: "http://127.0.0.1:4000/api/users",
+          url: "http://localhost:3000/api/users",
           success: function (response) {
             const usersTableBody = $("#usersTableBody");
             response.forEach((user) => {
