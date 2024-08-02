@@ -10,6 +10,11 @@ const app = express();
 
 // Connect to the database
 connectDB();
+app.use(
+  cors({
+    origin: "https://user-registration10.netlify.app/",
+  })
+);
 
 app.use(bodyParser.json());
 
